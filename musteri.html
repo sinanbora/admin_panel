@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/images/favicon_1.ico">
-    <title>Oto Boya-Renk Ara</title>
+    <title>Oto Boya-Müşteri</title>
     <link href="assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet">
     <link href="assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet">
     <link href="assets/plugins/multiselect/css/multi-select.css" rel="stylesheet" type="text/css">
@@ -67,12 +67,12 @@
                             <a href="" class="waves-effect"><i class="ti-paint-bucket"></i><span class="label label-success pull-right">3</span><span>Renk</span></a>
                             <ul class="list-unstyled">
                                 <li><a href="renk_ekle.html" class="waves-effect "><i class="ti-plus"></i> <span>Renk Ekle</span></a></li>
-                                <li><a href="renk_ara.html" class="waves-effect active"><i class="ti-search"></i> <span>Renk Ara</span></a></li>
+                                <li><a href="renk_ara.html" class="waves-effect "><i class="ti-search"></i> <span>Renk Ara</span></a></li>
                                 <li><a href="boya_yapma.html" class="waves-effect "><i class="ti-paint-roller"></i> <span>Boya Yap </span></a></li>
                             </ul>
                         </li>
                         <li class="">
-                            <a href="musteri.html" class="waves-effect "><i class="ti-user"></i> <span>Müşteri</span></a>
+                            <a href="musteri.html" class="waves-effect active"><i class="ti-user"></i> <span>Müşteri</span></a>
                         </li>
                         <li class="">
                             <a href="rapor.html" class="waves-effect "><i class="ti-agenda"></i> <span>Rapor</span></a>
@@ -127,50 +127,30 @@
                         <div class="col-lg-12">
                             <div class="panel panel-border panel-inverse">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Arama Sayfası</h3>
-                                    <p><small>Aramak istediğiniz başlığı ilgili alanlara yazarak arayınız</small></p>
+                                    <h3 class="panel-title">Müşteri Ekle</h3>
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Renk Adı">
+                                            <input type="text" class="form-control" placeholder="Müşteri Adı Soyadı">
                                         </div>
                                         <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Renk Üretici">
+                                            <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Telefon Numarası">
                                         </div>
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Renk Tipi">
-                                        </div>
+
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Katalog">
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <input type="number" class="form-control" placeholder="Marka">
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Model">
+                                        <div class="col-lg-8">
+                                            <textarea name="" id="" class="form-control" rows="3" placeholder="Adress Giriniz"></textarea>
                                         </div>
                                     </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Kod">
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <input type="number" class="form-control" placeholder="Yıl">
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Minimum Miktarı">
-                                        </div>
-                                    </div>
+
                                     <br>
                                     <div class="row">
                                         <div class="col-lg-6 col-lg-offset-3">
                                             <div class="text-center">
-                                                <button class="btn btn-custom btn-default w-lg">Ara</button>
+                                                <button class="btn btn-custom btn-default w-lg">Ekle</button>
                                             </div>
                                         </div>
                                     </div>
@@ -185,9 +165,25 @@
                         <div class="col-lg-12">
                             <div class="panel panel-border panel-inverse">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Arama Sonuçları <small>( 34 adet sonuç bulundu)</small></h3>
+                                    <h3 class="panel-title">Müşteri Lİste</h3>
+                                    <p><small>Arama kriterlerini girip arayarak sonuçları filtreleyebilirsiniz</small></p>
                                 </div>
                                 <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <input type="text" class="form-control" placeholder="Ad Soyad">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input type="date" class="form-control" placeholder="Tarih">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input type="text" class="form-control" placeholder="Boya">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button class="btn btn-default btn-block">Ara</button>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="table-responsive">
@@ -195,57 +191,39 @@
                                                     <thead>
                                                         <tr>
 
-                                                            <th>Adı</th>
-                                                            <th>Üretici</th>
-                                                            <th>Tipi</th>
-                                                            <th>Katalog</th>
-                                                            <th>Marka</th>
-                                                            <th>Model</th>
-                                                            <th>Kod</th>
-                                                            <th>Yıl</th>
-                                                            <th>Min. Miktarı</th>
+                                                            <th>Adı Soyadı</th>
+                                                            <th>Telefon</th>
+                                                            <th>Tarih</th>
+                                                            <th>Boya</th>
+                                                            <th>Fatura</th>
+                                                            <th>Bakiye</th>
+                                                            <th>Toplam</th>
                                                             <th style="width: 80px">İşlem</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>Siyah</td>
-                                                            <td>Mavikent</td>
-                                                            <td>Tip 1</td>
-                                                            <td>Katalog 1</td>
-                                                            <td>Mercedes</td>
-                                                            <td>CLK</td>
-                                                            <td>Ax23</td>
-                                                            <td>2014</td>
-                                                            <td>100 gr</td>
+                                                            <td>Sinan BORA</td>
+                                                            <td>555-555-55-55</td>
+                                                            <td>31.07.2015</td>
+                                                            <td>Mix54</td>
+                                                            <td>100 &#x20BA;</td>
+                                                            <td>100 &#x20BA;</td>
+                                                            <td>0 &#x20BA;</td>
+
                                                             <td>
                                                                 <a href="" class="table-action-btn"><i class="md md-edit"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Siyah</td>
-                                                            <td>Mavikent</td>
-                                                            <td>Tip 1</td>
-                                                            <td>Katalog 1</td>
-                                                            <td>Mercedes</td>
-                                                            <td>CLK</td>
-                                                            <td>Ax23</td>
-                                                            <td>2014</td>
-                                                            <td>100 gr</td>
-                                                            <td>
-                                                                <a href="" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Siyah</td>
-                                                            <td>Mavikent</td>
-                                                            <td>Tip 1</td>
-                                                            <td>Katalog 1</td>
-                                                            <td>Mercedes</td>
-                                                            <td>CLK</td>
-                                                            <td>Ax23</td>
-                                                            <td>2014</td>
-                                                            <td>100 gr</td>
+                                                            <td>Sinan BORA</td>
+                                                            <td>555-555-55-55</td>
+                                                            <td>31.07.2015</td>
+                                                            <td>Mix54</td>
+                                                            <td>100 &#x20BA;</td>
+                                                            <td>100 &#x20BA;</td>
+                                                            <td>0 &#x20BA;</td>
+
                                                             <td>
                                                                 <a href="" class="table-action-btn"><i class="md md-edit"></i></a>
                                                             </td>
@@ -289,6 +267,7 @@
     <script src="assets/plugins/bootstrap-filestyle/src/bootstrap-filestyle.min.js" type="text/javascript"></script>
     <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
     <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
     <script src="assets/js/jquery.core.js"></script>
     <script src="assets/js/jquery.app.js"></script>
     <script>
